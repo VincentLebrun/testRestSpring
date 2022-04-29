@@ -12,7 +12,7 @@ import java.util.List;
 @Getter
 @Setter
 @NoArgsConstructor
-
+@Entity
 //Model Products
 public class Products {
     @Id
@@ -37,6 +37,11 @@ public class Products {
       **/
 
     @ManyToMany
-    private List <Storage> storages;
+    @JoinTable(
+            name = "products_storages",
+            joinColumns = @JoinColumn(name="product_id"),
+            inverseJoinColumns = @JoinColumn(name = "storage_id")
+    )
+    private List<Storage> storages;
 
 }

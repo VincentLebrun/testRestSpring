@@ -25,6 +25,6 @@ public class Storage {
     private String tel;
     private String email;
 
-    @ManyToMany
+    @ManyToMany(mappedBy = "storages")
     private List<Products> products;
 }

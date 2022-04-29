@@ -12,7 +12,7 @@ import java.util.List;
 @Getter
 @Setter
 @NoArgsConstructor
-
+@Entity
 //Model Products
 public class Brand {
     @Id
@@ -21,7 +21,8 @@ public class Brand {
     private Long id;
 
     private String name;
-    //Mémo une marque à plusieurs produits donc OneTomany
-    @OneToMany
+    //Mémo une marque à plusieurs produits donc OneTomany et le maped by te permet de lier
+    //Sans le mappedBy tu as l'erreur
+    @OneToMany(mappedBy = "brand")
     private List<Products> products;
 }
