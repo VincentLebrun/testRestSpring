@@ -1,0 +1,19 @@
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/testRest
+    username: postgres
+    password: 1234
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+security:
+  jwt:
+    secret: OWJiN2UyMzA0ZDE1N2ZiOWZiZmVmMWJmNjFmMjY3ZGM1YjA3Yzc4ZjRlYTEyODE1YjFhNzVmNmFlZDhjZWI0NTZlYzc2YjE3NTlkNzcxNGRjYjlkN2ExNjE4ZTRmNTM4MjNjMGYwZDQwNzhkMjgyOWNlMzYyNzU1YzdjYWJhODk=
+    token-validity: 8640000 #24h
