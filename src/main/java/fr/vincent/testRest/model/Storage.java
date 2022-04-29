@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.util.List;
 
 //Using Lombok generators
 @Getter
@@ -23,4 +24,7 @@ public class Storage {
     private String name;
     private String tel;
     private String email;
+
+    @ManyToMany
+    private List<Products> products;
 }

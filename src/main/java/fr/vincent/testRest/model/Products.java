@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.util.List;
 
 //Using Lombok generators
 @Getter
@@ -25,6 +26,17 @@ public class Products {
     private float length;
     private float width;
     private float weight;
+// Plusieurs Produits ont une seule marque
+    @ManyToOne
+    private Brand brand;
 
+    /**Mémo tu peux utiliser les produit si la 2 ème cardinalité est un many
+     * donc dans l'autre entitée le premier sera many
+     *une petite astuce xTox et tu remplis 
+     *
+      **/
+
+    @ManyToMany
+    private List <Storage> storages;
 
 }

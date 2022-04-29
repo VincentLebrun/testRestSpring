@@ -23,6 +23,7 @@ public class User {
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "user_seq")
     @SequenceGenerator(name= "pokemon_seq", initialValue = 1000, allocationSize = 1)
     private Long id;
+
     private String firstname;
     private String lastName;
     private int age;
