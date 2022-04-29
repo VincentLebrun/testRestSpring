@@ -32,7 +32,7 @@ public class Products {
 
     /**Mémo tu peux utiliser les produit si la 2 ème cardinalité est un many
      * donc dans l'autre entitée le premier sera many
-     *une petite astuce xTox et tu remplis 
+     *une petite astuce xTox et tu remplis
      *
       **/
 
